@@ -1,0 +1,38 @@
+body{
+	font-family: 'arial';
+}
+#addDelBtn,
+#seaBtn{
+	margin: 10px;
+}
+#container{
+  margin: 20px 0 0 20px;
+}
+ul{
+  padding: 0px 20px;
+}
+ul li{
+  height: 30px;
+  cursor: pointer;
+}
+ul li a{
+  padding: 0 20px;
+}
+.unfold,.fold{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+.unfold{
+	background:url('../img/unfold.png') no-repeat;
+}
+.fold{
+	background:url('../img/fold.png') no-repeat;
+}
+.selected{
+	background: #fec8b0;
+}
+.searched{
+	background: #593c7f;
+}

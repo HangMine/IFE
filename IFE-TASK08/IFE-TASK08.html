@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<!-- 该节要点：
+1.通过@media实现不同屏幕的响应式设计
+2.通过box-sizing属性来解决不同DIV之间的边距问题（所有div设置为Border-box,方便宽度用百分比进行操作）
+3.需根据不同屏幕进行响应的div的class命名需包含响应前响应后
+4.CSS包括两部分，响应前和响应后，响应前必须是小屏幕的，按照从小到大的顺序（根据@media min-width的特性决定）
+5.全部用float:left布局 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IFE-TASK08</title>
+        <link rel="stylesheet" type="text/css" href="css/IFE-TASK08.css">
+    </head>
+    <body>
+        <div class="container">
+          <div class="col-sm-4 col-xs-6">4-6</div>
+          <div class="col-sm-4 col-xs-6">4-6</div>
+          <div class="col-sm-4 col-xs-12">4-12</div>
+          <div class="col-sm-3 col-xs-3">3-3</div>
+          <div class="col-sm-6 col-xs-6">6-6</div>
+          <div class="col-sm-3 col-xs-3">3-3</div>
+          <div class="col-sm-1 col-xs-2">1-2</div>
+          <div class="col-sm-1 col-xs-2">1-2</div>
+          <div class="col-sm-2 col-xs-8">2-8</div>
+          <div class="col-sm-2 col-xs-3">2-3</div>
+          <div class="col-sm-6 col-xs-3">6-3</div>
+        </div>
+    </body>
+</html>

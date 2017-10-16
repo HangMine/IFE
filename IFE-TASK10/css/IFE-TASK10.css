@@ -1,0 +1,40 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+.div{
+  width: 150px;
+  border: 1px solid #f00;
+  margin: 10px;
+}
+.div1{
+  height: 200px;
+  border: 1px solid #0f0;
+}
+.div2{
+  height: 120px;
+}
+.div3{
+  height: 100px;
+}
+.div4{
+  height: 40px;
+}
+@media (min-width:641px) {
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+  }
+  .div1{
+    order: 4;
+  }
+}

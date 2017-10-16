@@ -1,0 +1,117 @@
+body{
+  font-family: "微软雅黑";
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;/*!!排列顺序是column时，排列属性也要相反操作！！*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+th{
+  background: black;
+  color: white;
+  text-align: left;
+}
+.gray{
+  background: rgba(121, 121, 121, 0.43);
+}
+.red{
+  color: red;
+}
+.div1{
+  width:60%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.div1 input{
+  width: 50%;
+}
+.div1 input:focus{
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.carousel{
+  position: relative; /*!!必须加相对定位,使其位置固定在pics上面!!*/
+  width: 300px;
+  height: 150px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.pics{
+  position: absolute;/*!!必须加绝对 定位,使其位置固定从左边开始向左滑动!!*/
+  left: 0;
+  width: 900px;
+  height: 150px;
+  -webkit-animation: carousel  ease 12s infinite;
+          animation: carousel  ease 12s infinite;
+}
+@-webkit-keyframes carousel{
+       0%{ left: 0; }
+      28%{ left: 0; }
+      35%{ left: -300px; }
+      63%{ left: -300px; }
+      70%{ left: -600px; }
+       98%{ left: -600px; }
+       100%{ left: 0; }
+     }
+@keyframes carousel{
+       0%{ left: 0; }
+      28%{ left: 0; }
+      35%{ left: -300px; }
+      63%{ left: -300px; }
+      70%{ left: -600px; }
+       98%{ left: -600px; }
+       100%{ left: 0; }
+     }
+.pic{
+  position: absolute;/*!!必须加绝对 定位,方便后续设置向左滑动!!*/
+  /*display: inline-block; */
+  width: 300px;
+  height: 150px;
+}
+#one{
+  background: green;
+  left:0;
+}
+#two{
+  background: blue;
+  left:300px;
+}
+#three{
+  background: yellow;
+  left:600px;
+}
+.tag{
+       display: inline-block;
+       width:30px;
+       height: 30px;
+       margin:0;
+       position: relative;
+       top:-30px;
+       left: 100px;
+       background-color: rgba(0,0,0,0.5);
+       color:white;
+       line-height: 30px;
+       text-align: center;
+     }
+     .tag1:target{
+       left: 0;
+     }
+     .tag2:target{
+       left:0;
+     }
+     .tag3:target{
+       left:0;
+     }

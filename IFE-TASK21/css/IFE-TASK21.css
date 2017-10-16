@@ -1,0 +1,74 @@
+* {
+  margin:0;
+  padding: 0;
+}
+
+textarea,
+button,
+input {
+  margin:10px;
+  float: left;
+}
+
+textarea,
+input {
+  border: 1px solid CornflowerBlue;
+  color: CornflowerBlue;
+  background-color: white;
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  padding-left: 10px;
+}
+textarea {
+  clear: both;
+  overflow: hidden;
+}
+button {
+  border: 1px solid CornflowerBlue;
+  color: CornflowerBlue;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+}
+
+button:hover {
+  background-color: CornflowerBlue;
+  color: white;
+}
+
+textarea:focus,
+button:focus,
+input:focus {
+  outline-width: 0px;
+}
+.tagContainer,
+.hobbyContainer {
+  clear: both;
+}
+.tagContainer>div,
+.hobbyContainer>div {
+  animation: fadein 1s;
+  float: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  margin: 1px;
+  color: LemonChiffon ;
+  background-color: CornflowerBlue;
+  text-align: center;
+  line-height: 150px;
+}
+.tagContainer>div:hover,
+.hobbyContainer>div:hover {
+  background-color: lightgreen;
+}
+@-webkit-keyframes fadein {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 100%;
+  }
+}
