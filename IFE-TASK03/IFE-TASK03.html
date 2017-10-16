@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>study3</title>
+	<style>
+		body{
+			padding: 20px;
+		}
+		.main_wrapper{
+			margin: 0 auto;
+			padding: 20px;
+			background: #eee;
+			border: 1px solid #999;
+			overflow: auto;
+			min-width: 600px;			
+		}
+		.left{
+			float: left;
+			padding: 20px;	
+			width: 160px;
+			background: #fff;		
+			border: 1px solid #999;								
+			height: 80px;
+		}
+		.middle{
+			padding: 20px;			
+			margin-left: 220px;
+			margin-right: 140px;			
+			background: #fff;
+			border: 1px solid #999;
+		}
+		.right{
+			width:80px;
+			float: right;
+			background: #fff;
+			border: 1px solid #999;		
+			padding: 20px;						
+		}
+		img{
+			width: 80px;
+			height: 80px;
+
+		}
+		.imgmiddle{
+			margin-top: 10px;
+		}
+		.imgleft{
+			float: left;
+		}
+		.teamname{
+			text-align: center;
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main_wrapper">
+		<div class="left">
+		<img src="" alt="团队Logo 80*80" class="imgleft">
+		<div class="teamname">团队名称</div>
+		</div>
+		<div class="right">
+		<img src="" alt="个人Logo80*80">
+		<img src="" alt="个人Logo80*80" class="imgmiddle">
+		<img src="" alt="个人Logo80*80" class="imgmiddle">
+		<img src="" alt="个人Logo80*80" class="imgmiddle">
+		</div>
+		<div class="middle">
+		<h2>注意：</h2>
+		<p>子DIV的顺序必须是浮动的子DIV在前面，不浮动的在后面，比如此例子的子DIV包含三个：left,middle和right。<br>
+		在主DIV里加入子DIV的时候的顺序必须按照left>right>middle的顺序。</p>
+		<h2>原因：</h2>
+		<p>如果middle放中间的话，right的div会在middle的下一行向右浮动</p>
+		<h2>CSS书写顺序:</h2>
+		<p> 1.位置属性(position, top, right, z-index,display, float等)<br>
+			2.大小(width, height, padding, margin)<br>
+			3.文字系列(font, line-height, letter-spacing,color- text-align等)　　<br>
+			4.背景(background, border等)　　<br>
+			5.其他(animation, transition等)</p>		
+		</div>
+	</div>
+</body>
+</html>
