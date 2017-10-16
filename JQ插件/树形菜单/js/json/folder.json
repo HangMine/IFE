@@ -1,0 +1,18 @@
+[{
+  "id":"n-1","text":"Boss Node","unfold":true,"children":[
+    {"id":"n-2","text":"Node1","unfold":true,"children":[
+    	{"id":"n-3","text":"Node11","unfold":true,"children":[
+    		{"id":"n-4","text":"Node111","unfold":true},
+    		{"id":"n-5","text":"Node112","unfold":true},
+    		{"id":"n-6","text":"Node113","unfold":true}
+    	]},
+    	{"id":"n-7","text":"Node12","unfold":true},
+    	{"id":"n-8","text":"Node13","unfold":true},
+    	{"id":"n-9","text":"Node14","unfold":true}
+    ]},
+    {"id":"n-10","text":"Node2","unfold":true,"children":[
+    	{"id":"n-11","text":"Node21","unfold":true},
+    	{"id":"n-12","text":"Node22","unfold":true}
+    ]},
+  ]
+}]

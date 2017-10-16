@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #ddd;
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			.nav{
+				background: #fff;
+				width: 100%;
+				height: 100px;
+				font-size: 20px;
+				line-height: 100px;
+				text-align: center;
+				border-bottom: 1px solid #f60;
+			}
+			.box{
+				margin: 0 auto;
+				width: 1200px;
+			}
+			.fl_l{
+				width: 200px;
+				float: left;
+				border: 1px solid #f4f4f4;
+				background: #fff;
+			}
+			.fl_l li a{
+				border-bottom: 1px solid #eee;
+				text-align: center;
+				display: block;
+				color: #333;
+				font-size: 14px;
+				line-height: 60px;
+			}
+			.fl_l li.active a{
+				background: #f60;
+				color: #fff;
+			}
+			.fl_r{
+				float: right;
+				width: 960px;
+			}
+			.fl_r li{
+				margin-bottom: 30px;
+				background: #fff;
+				font-size: 50px;
+				line-height: 300px;
+				display: block;
+				text-align: center;
+			}
+			.banner{
+				background: #fff;
+				width: 100%;
+				height: 600px;
+				font-size: 40px;
+				line-height: 600px;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--辅助理解的线条<div style="position: fixed;top: 316px;height: 1px;background: #000;width: 100%;"></div>-->
+		<div class="nav">nav</div>
+		<div class="banner">banner</div>
+		<div class="box">
+			<ul class="fl_l">
+				<li class="active"><a href="##">菜单1</a></li>
+				<li><a href="##">菜单2</a></li>
+				<li><a href="##">菜单3</a></li>
+				<li><a href="##">菜单4</a></li>
+			</ul>
+			<ul class="fl_r">
+				<li style="height: 600px;">菜单1内容</li>
+				<li style="height: 600px;">菜单2内容</li>
+				<li style="height: 400px;">菜单3内容</li>
+				<li style="height: 500px;">菜单4内容</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//设置标杆
+				var _line=parseInt($(window).height()/2);
+				$(window).scroll(function(){
+					//滚动730px，左侧导航固定定位
+					if ($(window).scrollTop()>730) {
+						$('.fl_l').css({'position':'fixed','top':100})
+					}else{
+						$('.fl_l').css({'position':'','top':''})
+					};
+					$('.fl_l li').eq(0).addClass('active');
+					//滚动到标杆位置,左侧导航加active
+					$('.fl_r li').each(function(){
+						var _target=parseInt($(this).offset().top-$(window).scrollTop()-_line);
+						var _i=$(this).index();
+						if (_target<=0) {
+							$('.fl_l li').removeClass('active');
+							$('.fl_l li').eq(_i).addClass('active');
+						}
+						//如果到达页面底部，给左侧导航最后一个加active
+						else if($(document).height()==$(window).scrollTop()+$(window).height()){
+							$('.fl_l li').removeClass('active');
+							$('.fl_l li').eq($('.fl_r li').length-1).addClass('active');
+						}
+					});
+				});
+				$('.fl_l li').click(function(){
+					$(this).addClass('active').siblings().removeClass('active');
+					var _i=$(this).index();
+					 $('body, html').animate({scrollTop:$('.fl_r li').eq(_i).offset().top-_line},500);
+				});
+			});
+		</script>
+	</body>
+</html>
