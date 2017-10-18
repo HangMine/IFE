@@ -10,7 +10,7 @@ function Form(data) {
     this.init();
 }
 Form.prototype= {
-    init2: function () {
+    init: function () {
         on(this.ipt, 'focus', this.default_tip.bind(this));
         on(this.ipt, 'blur', this.validator.bind(this));
         on(this.ipt, 'change', this.validator.bind(this));
