@@ -7,7 +7,7 @@ function Data_product(data_box) {
     this.id = 0;
 }
 Data_product.prototype= {
-    Data_product: function () {
+    init: function () {
         //调用事件绑定函数；
         this.addEvent();
     },
@@ -22,9 +22,9 @@ Data_product.prototype= {
         return data_box.box[data_box.value];
     },
     showTable: function (e) {
-        if (e.target.getAttribute('type') == 'radio') { //所有type为radio的Input
-            e.target.parentNode.className = e.target.id;//将目标的ID赋予目标的class
-            if (!/necessary/.test(e.target.id))//ID不包含necessary字眼的目标，执行下列语句
+        if (e.target.getAttribute('type') == 'radio') {
+            e.target.parentNode.className = e.target.id;
+            if (!/necessary/.test(e.target.id))
             //同步输入框中名字的设置
                 this.box.label_box.box.value = e.target.nextElementSibling.textContent;
         }
@@ -78,7 +78,7 @@ Data_product.prototype= {
     setStyle: function () {
         var text = this.getText(this.box.style_box);
         console.log(text);
-        this.box.result_box.className = text == '样式一' ? 'style1' : 'style2'; //修改表单展示区域的class
+        this.box.result_box.className = text == '样式一' ? 'style1' : 'style2';
     },
     //总的添加表单的逻辑处理
     addForm: function (data) {
